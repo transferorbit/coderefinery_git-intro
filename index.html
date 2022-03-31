@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to version control with Git &mdash; Introduction to version control with Git  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex/" />
+    <link rel="search" title="Search" href="search/" />
+    <link rel="next" title="Motivation" href="motivation/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Introduction to version control with Git
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="motivation/">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/">Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="branches/">Branching and merging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conflicts/">Conflict resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remotes/">Sharing repositories online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archaeology/">Inspecting history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level/">Practical advice: how much Git is necessary?</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="staging-area/">Using the Git staging area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recovering/">Undoing and recovering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interrupted/">Interrupted work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aliases/">Aliases and configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="under-the-hood/">Git under the hood</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customizing/">Customizing Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources/">Other resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Introduction to version control with Git</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Introduction to version control with Git</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/git-intro/blob/main/content/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction-to-version-control-with-git">
+<span id="index"></span><h1>Introduction to version control with Git<a class="headerlink" href="#introduction-to-version-control-with-git" title="Permalink to this headline"></a></h1>
+<p>This is the introductory lesson to version control using
+<a class="reference external" href="https://git-scm.com/">Git</a>. It is assumed to be the very first thing
+done in a course.</p>
+<p>Our philosophy is that we start from own local repository, branching and
+merging (locally), and a brief introduction to pushing to remotes. In
+the separate <a class="reference external" href="https://coderefinery.org/lessons/">collaborative git
+lesson</a>, we teach more use of
+remote repositories and good collaborative workflows. We try to stick to
+simple workflows, just enough for researchers who are not obsessed with
+Git to be able to work well. We try to avoid commands which might get
+you into a confusing state.</p>
+<p>The goals of the module as a whole are that the user will feel
+comfortable about staging changes, committing them, merging, and
+branching.</p>
+<div class="admonition-prerequisites prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Prerequisites</p>
+<ul class="simple">
+<li><p>A reasonably recent version of Git is installed. For installation
+instructions see <a class="reference external" href="https://coderefinery.github.io/installation/">the CodeRefinery installation
+instructions</a>.</p></li>
+<li><p>Being comfortable with the command line. No expertise is required,
+but the lesson will be mostly taken from the command line.</p></li>
+<li><p>Students should be familiar with using a text editor on their
+system. Emacs and Vim are excellent choices if you know how to use
+them but Nano or Notepad on Windows are sufficient.</p></li>
+<li><p>Git should be configured prior to the lesson following <a class="reference external" href="https://coderefinery.github.io/installation/">our
+installation
+instructions</a>.</p></li>
+<li><p>A <a class="reference external" href="https://github.com">GitHub</a> user account (but alternatives
+exist, see below).</p></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="motivation/">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/">Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="branches/">Branching and merging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conflicts/">Conflict resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remotes/">Sharing repositories online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archaeology/">Inspecting history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level/">Practical advice: how much Git is necessary?</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="staging-area/">Using the Git staging area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recovering/">Undoing and recovering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interrupted/">Interrupted work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aliases/">Aliases and configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="under-the-hood/">Git under the hood</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/">Quick reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customizing/">Customizing Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources/">Other resources</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Why GitHub?</strong></p>
+<p>In this introduction we will mention and use
+<a class="reference external" href="https://github.com">GitHub</a> but also
+<a class="reference external" href="https://gitlab.com">GitLab</a> and
+<a class="reference external" href="https://bitbucket.org">Bitbucket</a> allow similar workflows and
+basically everything that we will discuss is transferable. With this
+material and these exercises we do not endorse the company
+<a class="reference external" href="https://github.com">GitHub</a>. We have chosen to demonstrate a
+number of concepts using examples with
+<a class="reference external" href="https://github.com">GitHub</a> because it is currently the most
+popular web platform for hosting Git repositories and the chance is
+high that you will interact with
+<a class="reference external" href="https://github.com">GitHub</a>-based repositories even if you choose
+to host your Git repository on another platform.</p>
+<p>Course participants are most welcome to use our <a class="reference external" href="https://source.coderefinery.org">Nordic research
+software repository platform</a>
+instead, for more information see
+<a class="reference external" href="https://coderefinery.org/repository/">https://coderefinery.org/repository/</a>.</p>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="motivation/" class="btn btn-neutral float-right" title="Motivation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
